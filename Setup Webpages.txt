@@ -1,0 +1,7 @@
+Making webpages in django consist of three states:
+    1. defining URLs
+    2. writing views
+    3. writing templates
+
+No order to actually complete, but good idea to start with URLs.
+
