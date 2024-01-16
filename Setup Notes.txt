@@ -1,0 +1,57 @@
+1. pip install --upgrade pip
+
+2. pip install virtualenv
+3. virtual venv  // install the venv in the folder of choice
+
+Now you have to be in the virtual environment mode to install django
+    * Change to the bin folder in venv.  
+
+4. source activate  // you just type deactivate to stop the venv. 
+********************************************
+    *     * You will see (venv) gboz:bin/ $
+********************************************
+Change dir to the main folder /master
+
+5. pip install django==4.1.*
+    * pip list to check
+
+While still in master you need to create the project.
+
+********************  DO NOT FORGET THE DOT!!!!!  ***********************
+6. django-admin startproject BOZ_Project .
+    ** Very important to put in the dot.  It will create the folder
+    ** the correct way to make it easier to deploy an app.
+
+While still in the venv and /master, we need to create/link the database
+    * You will see db.sqlite3
+    * Anytime you modify the db you need to migrate
+
+7. python manage.py migrate
+
+*************************************************
+***  Check-Check - python manage.py runserver ***
+*************************************************
+
+8. git init in the main folder
+
+While in the venv and /master. (manage.py) we need to create the django app
+    * You can have more than one app
+
+python manage.py startapp master
+    * I think it should be the same name as the folder
+
+After you have setup your apps (putting it at the top) you need to migrate
+
+9. python manage.py makemigrations master
+    ** This tells django to figure out how to make the models work in the db
+
+10. pyton manage.py migrate
+    ** Now, we need to have the django setup the db.  
+
+Everytime you change a model, you have to follow three steps to update the database
+    * Modify models
+    * call makemigrations master
+    * migrate
+
+11. python manage.py createsuperuser
+    * Now we need to create a super user
