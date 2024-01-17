@@ -4,4 +4,4 @@ Making webpages in django consist of three states:
     3. writing templates
 
 No order to actually complete, but good idea to start with URLs.
-
+    *** For urls, remember the comma after the defining a path.  Easy to forget.
