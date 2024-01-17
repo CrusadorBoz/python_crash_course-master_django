@@ -8,7 +8,7 @@ app_name = 'master'
 
 urlpatterns = [
     # Home Page
-    path('', views.index, name='home'),
+    path('', views.index, name='index'),
 
     path('pizza', views.pizza, name='pizza')
 
