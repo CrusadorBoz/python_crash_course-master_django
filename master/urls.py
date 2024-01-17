@@ -10,6 +10,8 @@ urlpatterns = [
     # Home Page
     path('', views.index, name='index'),
 
-    path('pizza', views.pizza, name='pizza')
+    path('pizza', views.pizza, name='pizza'),
+
+    path('topics', views.topics, name='topics')
 
 ]
