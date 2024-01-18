@@ -19,3 +19,10 @@ def pizza(request):
     """ The home page for Pizza:
     This was an example for how to create a seprate page """
     return render(request, 'pizza/index.html')
+
+def topic(request, topic_ad):
+    """ Show a single topic and all its entries """
+    topic = Topic.objects.get(id=topic_ad)
+    entries = topic.entry_set.order_by('-date_added')
+    context = {'topic': topic, 'enties': entries}
+    return render(request, 'master/topic.html', context)
