@@ -1,3 +1,13 @@
+Defining Models
+Models tell django how to work with the data that will be stored in the app.
+You can see the different type of fields at https://docs.djangoproject.com/en/4.1/ref/models/fields
+After you update a model, you need to type python manage.py makemigrations <name of app>
+    This will tell django to figure out how to modify the database
+Then you type python manage.py migrate.  
+
+admin.py:
+We have to register our models into the admin.py.  
+
 Making webpages in django consist of three states:
     1. defining URLs
     2. writing views
