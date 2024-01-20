@@ -15,3 +15,16 @@ Making webpages in django consist of three states:
 
 No order to actually complete, but good idea to start with URLs.
     *** For urls, remember the comma after the defining a path.  Easy to forget.
+
+urls.py:
+we need to create a app/urls.py file.  In the admin/urls.py file we need to include this link.
+
+    in urls.py import path.  code: from django.urls import path, include
+    in the urlpatterns: code: path('', include('app.urls')),
+
+views:
+create a home page link
+    
+    def index(request):
+        """ The home page for app """
+        return render(request, 'app/index.html')
