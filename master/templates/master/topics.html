@@ -13,6 +13,8 @@
         {% empty %}
             <li>No Topics have been added yet.</li>
         {% endfor %}
-    </ul>    
+    </ul>
+
+    <a href="{% url 'master:new_topic' %}">Add a new topic</a>
 
 {% endblock content %}
