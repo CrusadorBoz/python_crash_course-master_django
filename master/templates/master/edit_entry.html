@@ -1,0 +1,15 @@
+{% extends "master/base.html" %}
+
+{% block content %}
+
+    <p><a href="{% url 'master:topic' topic.id %}">{{ topic }}</a></p>
+
+    <p>Edit entry:</p><br>
+
+    <form action="{% url 'master:edit_entry' entry.id %}" method='post'>
+        {% csrf_token %}
+        {{ form.as_div }}
+        <button name='submit'>Save Changes</button>
+    </form>
+
+{% endblock content %}
